@@ -27,20 +27,36 @@ public class exercico3 {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
+        int soma = 0;
+        int maior = Integer.MIN_VALUE; // menor valor possivel
+        int menor = Integer.MAX_VALUE; // maior valor possivel
 
-        int number[];
-        boolean validnumber = false;
-
-        while(!validnumber){
+        for (int i = 0; i < 5; i++){
             try {
-                for(int i; number[i] < 6; i++){
-                    System.out.println("Digite 5 numeros inteiros:");
-                }
+                System.out.print("Digite o " + (i+1) + "º numero: ");
+                int numero = sc.nextInt();
+                
+                soma += numero;
+                if(numero > maior)
+                    maior = numero;
+                    else if(numero < menor)
+                        menor = numero;
+                        
             } catch (Exception e) {
-                // TODO: handle exception
+                System.out.println("Numero invalido! Por favor verifique.");
+                sc.nextLine();
+                i--;
             }
         }
 
+        double media = (double) soma/5;
 
+        System.out.println("Soma: " + soma);
+        System.out.println("media: " + media);
+        System.out.println("Maior: " + maior);    
+        System.out.println("Menor: " + menor);
+
+        sc.close();
     }
 }
