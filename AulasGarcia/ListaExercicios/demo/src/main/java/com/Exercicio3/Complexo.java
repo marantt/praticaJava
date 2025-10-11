@@ -70,29 +70,3 @@ public class Complexo {
     }
 
 }
-
-    public Complexo(double a, double b) {
-        this.a = a;
-        this.b = b;
-    }
-
-    public double getA() { 
-        return a;
-    }
-
-    public double getB() {
-        return b;
-    }
-
-    public Complexo soma(Complexo c) {
-        return new Complexo(this.a + c.a, this.b + c.b);
-    }
-
-    public Complexo multiplica(Complexo c) {
-        return new Complexo((this.a * c.a - this.b * c.b), (this.a * c.b + this.b * c.a));
-    }
-
-    
-
-}
-
