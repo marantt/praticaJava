@@ -1,10 +1,10 @@
 package com.Exercicio3;
 
 /*
-Exerc´ıcio 3. Implemente uma classe chamada Complexo para representar
-n´umeros imagin´arios e esta deve possuir:
+Exercıcio 3. Implemente uma classe chamada Complexo para representar
+numeros imaginarios e esta deve possuir:
 • Atributos: dois doubles a (Parte real) e b (Parte imaginaria).
-• M´etodos:
+• Metodos:
 1. Construtor;
 2. soma(): recebe via parametro outro numero complexo (objeto desta
 classe) e efetua sua soma, ou seja, parte real sera somada com parte
@@ -12,7 +12,7 @@ real e parte imaginaria com parte imaginaria.
 3. multiplica(): recebe via parˆametro outro complexo (objeto desta
 classe) e efetue a f´ormula (a + bi) · (c + di) = (ac − bd) + (ad + bc)i
 4. toString(): Mostra uma string na tela com os atributos a e b na
-nota¸c˜ao Complexa a + bi;
+notacao Complexa a + bi;
 1
 5. modulo(): retorna o m´odulo do n´umero complexo que ´e dado por
 √
@@ -31,7 +31,8 @@ a
 
 public class Complexo {
 
-    private double a,b;
+    private double a;
+    private double b;
 
     public Complexo(double a, double b) {
         this.a = a;
@@ -46,8 +47,15 @@ public class Complexo {
         return b;
     }
 
-    public double soma() {
-        this.a =+ this.a.
+    public Complexo soma(Complexo c) {
+        return new Complexo(this.a + c.a, this.b + c.b);
     }
 
+    public Complexo multiplica(Complexo c) {
+        return new Complexo((this.a * c.a - this.b * c.b), (this.a * c.b + this.b * c.a));
+    }
+
+    
+
 }
+
