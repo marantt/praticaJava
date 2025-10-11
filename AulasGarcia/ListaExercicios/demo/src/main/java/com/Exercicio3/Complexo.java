@@ -55,6 +55,43 @@ public class Complexo {
         return new Complexo((this.a * c.a - this.b * c.b), (this.a * c.b + this.b * c.a));
     }
 
+    @Override
+    public String toString() {
+        String result = String.format("%f + %fi", this.a, this.b);
+        return result;
+    }
+
+    public double modulo() {
+        return Math.sqrt(Math.pow(this.a, 2) + Math.pow(this.b, 2));
+    }
+
+    public double argumentoPrincipal() {
+        return Math.atan(this.b/this.a);
+    }
+
+}
+
+    public Complexo(double a, double b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public double getA() { 
+        return a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public Complexo soma(Complexo c) {
+        return new Complexo(this.a + c.a, this.b + c.b);
+    }
+
+    public Complexo multiplica(Complexo c) {
+        return new Complexo((this.a * c.a - this.b * c.b), (this.a * c.b + this.b * c.a));
+    }
+
     
 
 }
