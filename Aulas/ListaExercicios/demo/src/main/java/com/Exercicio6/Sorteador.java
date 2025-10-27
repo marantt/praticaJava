@@ -5,11 +5,12 @@ import java.util.Random;
 public class Sorteador {
     private int sort;
 
-    public Sorteador (int sort){
-        this.sort = sort;
+    public int sortearNumero(){
+        Random sorteado = new Random(100);
+        return this.sort = sorteado.nextInt();
     }
 
-    public int sortearNumero(){
-        
+    public boolean advinharNumero(int chute) {
+        return this.sort ==  chute;
     }
 }
